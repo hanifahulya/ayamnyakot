@@ -654,7 +654,7 @@ else:
 
     if not st.session_state.admin_login:
         st.markdown("## Login Admin")
-        st.caption("Untuk demo project, PIN default adalah 1234. PIN ini bisa diganti di kode aplikasi.")
+        st.caption("Masukkan PIN untuk mengakses halaman.")
         pin = st.text_input("Masukkan PIN Admin", type="password")
         if st.button("Masuk Admin", type="primary"):
             if pin == "1234":
@@ -1070,8 +1070,3 @@ else:
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 use_container_width=True
             )
-
-        st.info(
-            "Catatan: Versi ini cocok untuk demo project dan prototipe. "
-            "Untuk penggunaan jangka panjang, data sebaiknya disimpan di database online seperti Google Sheets, Firebase, Supabase, atau PostgreSQL."
-        )
